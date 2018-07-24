@@ -1,0 +1,54 @@
+<!-- start banner Area -->
+<div class="jumbotron jumbotron-fluid text-center bg-light">
+    <div class="container">
+      <h2 class="display-4">Lorem ipsum</h2>
+      <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          <span class="badge badge-dark">unknown</span></p>
+    </div>
+  </div><!-- End banner Area -->	
+
+
+<!-- Start category Area -->
+<section class="category-area section-gap" id="news">
+  <div class="container">
+    <div class="row d-flex justify-content-center">
+      <div class="menu-content pb-70 col-lg-8">
+        <div class="title text-center">
+          <h1 class="mb-10">Latest News from all categories</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore  et dolore magna aliqua.</p>
+        </div>
+      </div>
+    </div>						
+    <div class="row">
+        <div class="col-lg-4 col-md-6" *ngFor="let article of newArticles">
+          <app-post-card-horizontal [model]="article"></app-post-card-horizontal>
+        </div>
+      
+        <a *ngIf="isExist" (click)="getNewest()" class="primary-btn load-more pbtn-2 text-uppercase mx-auto mt-60">Load More </a>		
+      </div>									
+  </div>	
+</section>
+<!-- End category Area -->
+
+<!-- Start Hot topics Area -->
+<section class="travel-area section-gap" id="travel">
+  <div class="container">
+    <div class="row d-flex justify-content-center">
+      <div class="menu-content pb-70 col-lg-8">
+        <div class="title text-center">
+          <h1 class="mb-10">Hot topics from Travel Section</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore  et dolore magna aliqua.</p>
+        </div>
+      </div>
+    </div>						
+    <div class="row">
+        <div *ngFor="let article of hotArticles" class="col-lg-3 col-md-6">
+          <app-post-card-horizontal [model]="article"></app-post-card-horizontal>
+        </div>
+        
+        <a *ngIf="isExistHotArticle" (click)="getHotest()" class="primary-btn load-more pbtn-2 text-uppercase mx-auto mt-60">Load More </a>	        
+      </div>
+  </div>					
+</section>
+<!-- End Hot topics Area -->
+

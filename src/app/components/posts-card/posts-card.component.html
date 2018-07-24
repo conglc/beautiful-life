@@ -1,0 +1,18 @@
+<div class="single-list flex-row d-flex">
+  <div class="thumb">
+      <div class="date">
+          <span>{{model.createdAt | date: 'd'}}</span><br>{{model.createdAt | date: 'MMM'}}
+      </div>
+      <img src="{{model.image}}" class="img-responsive" alt="" width="302" height="183">
+  </div>
+  <div class="detail">
+      <a routerLink="/articles/{{model.id}}"><h4 class="pb-20">{{model.title}}</h4></a>
+      <p>
+          {{model.description}}
+      </p>
+      <p class="footer pt-20">
+      <i class="fa fa-heart-o" aria-hidden="true"></i>
+      <a href="#">06 Likes</a>     <i class="ml-20 fa fa-comment-o" aria-hidden="true"></i> <a href="#">02 Comments</a>
+      </p>
+  </div>
+</div>

@@ -1,0 +1,90 @@
+<!-- Start post Area -->
+<div class="post-wrapper pt-100">
+    <!-- Start post Area -->
+    <section class="post-area">
+        <div class="container">
+            <div class="row justify-content-center d-flex">
+                <div class="col-lg-8">              
+                    <div class="single-page-post">                        
+                        <div class="top-wrapper ">
+                            <div class="row d-flex justify-content-between">
+                                <h2 class="col-lg-9 col-md-12 text-uppercase">
+                                    {{model.title}}
+                                </h2>
+                                <div class="col-lg-3 col-md-12 right-side d-flex justify-content-end">
+                                    <div class="desc">                                       
+                                        <h3>{{model.createdAt | date: 'y-MMM-d h:mm a'}}</h3>
+                                    </div>                                
+                                </div>
+                            </div>
+                        </div>
+                        <div class="single-post-image">
+                            <img class="img-fluid" src="{{model.image}}" alt="">
+                        </div>
+                        <div class="single-post-content">
+                            <div [innerHTML]="model.content">
+
+                            </div>
+                        </div>
+                        <div class="bottom-wrapper">
+                            <div class="row">
+                                <div class="col-lg-4 single-b-wrap col-md-12">
+
+                                </div>
+                                <div class="col-lg-4 single-b-wrap col-md-12">
+                                </div>
+                                <div class="col-lg-4 col-lg-offset-8 single-b-wrap col-md-12">
+                                    <ul class="social-icons">
+                                        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-google" aria-hidden="true"></i></a></li>                                        
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Start nav Area -->
+                        <section class="nav-area pt-50 pb-100">
+                            <div class="container">
+                                <div class="row justify-content-between">
+                                    <div class="col-sm-6 nav-left justify-content-start d-flex">
+                                        <div class="thumb">
+                                            <img src="../assets/img/prev.jpg" alt="">
+                                        </div>
+                                        <div class="details">
+                                            <p>Prev Post</p>
+                                            <h4 class="text-uppercase"><a href="#">A Discount Toner</a></h4>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 nav-right justify-content-end d-flex">
+                                        <div class="details">
+                                            <p>Next Post</p>
+                                            <h4 class="text-uppercase"><a href="#">A Discount Toner</a></h4>
+                                        </div>             
+                                        <div class="thumb">
+                                            <img src="../assets/img/next.jpg" alt="">
+                                        </div>                         
+                                    </div>
+                                </div>
+                            </div>    
+                        </section>
+                        <!-- End nav Area -->
+                        
+                        
+                    </div>
+                                        
+                </div>
+
+                <div class="col-lg-4 sidebar-area">
+                    <app-post-archive></app-post-archive> 
+
+                    <app-recent-post></app-recent-post> 
+
+                    <app-tags></app-tags>                                             
+                </div>
+            </div>
+        </div>    
+    </section>
+    <!-- End post Area -->  
+</div>
+<!-- End post Area -->

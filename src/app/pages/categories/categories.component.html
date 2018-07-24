@@ -1,0 +1,33 @@
+<!-- Start post Area -->
+<div class="post-wrapper pt-100">
+    <!-- Start post Area -->
+    <section class="post-area">
+        <div class="container">
+            <div class="row justify-content-center d-flex">
+                <div class="col-lg-8">              
+                    <div class="post-lists">
+                        
+                        <div *ngFor="let article of articles">
+                            <app-posts-card [model]="article"></app-posts-card>
+                        </div>
+                        
+                        <div *ngIf="isExist" class="justify-content-center d-flex">
+                            <a (click)="getArticles()" class="text-uppercase primary-btn loadmore-btn mt-40 mb-60"> Load More Post</a>
+                        </div>                                                                     
+                    </div>
+                                        
+                </div>
+
+                <div class="col-lg-4 sidebar-area">
+                    <app-post-archive></app-post-archive> 
+
+                    <app-recent-post></app-recent-post> 
+
+                    <app-tags></app-tags>                                             
+                </div>
+            </div>
+        </div>    
+    </section>
+    <!-- End post Area -->  
+</div>
+<!-- End post Area -->
